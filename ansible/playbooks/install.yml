@@ -13,4 +13,11 @@
     BPREFIX: "{{ gentoo_prefix_path }}"
     LC_ALL: C
   roles:
-    - compatibility_layer
+    - role: compatibility_layer
+    - role: lnx-ar-roche-certificates ### added to mime RoCS
+      tags:
+        - certs
+
+    
+  vars:
+   ## add here the variables to be modified for rocs
